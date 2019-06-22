@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>User Input Form</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+	<form action="" class="main-form needs-validation" novalidate>
+
+
+		<div class="form-group">
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username" class="form-control" required>
+			<div class="invalid-feedback">Must contain only alphabets,numbers and underscores. </div>
+		</div>
+		<div class="form-group">
+			<label for="E-mail">E-mail</label>
+			<input type="text" name="E-mail" id="E-mail" class="form-control" required>
+			<div class="invalid-feedback">Please enter valid id. </div>
+
+		</div>
+		</div>
+
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="text" name="password" id="password" class="form-control" required>
+			<div class="invalid-feedback">Must contain 8 or more character with atleast one capitalized & special character. </div>
+		</div>
+		</div>
+
+		<div class="form-group">
+			<label for="password (again)">Password (again)</label>
+			<input type="password (again)" name="password (again)" id="password (again)" class="form-control" required>
+		</div>
+
+		<div class="form-group">
+			<label for="firstname">First name</label>
+			<input type="text" name="firstname" id="firstname" class="form-control">
+		</div>
+		</div>
+
+		<div class="form-group">
+			<label for="lastname">Last name</label>
+			<input type="text" name="lastname" id="lastname" class="form-control">
+
+		</div>
+		</div>
+		</div>
+
+		<div class="form-check">
+			<input type="checkbox" id="accept-terms" class="form-check-input" required>
+			<label for="accept-terms" class="form-check-label">I have read and agree to the Terms of service </label>
+		</div>
+		<button type="submit" class="btn btn-primary">⭐ Sign Me Up!</button>
+	</form>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script>
+		var form = document.querySelector('.needs-validation');
+		form.addEventListener('submit', function(event) {
+			if (form.checkValidity() === false) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
+			form.classList.add('was-validated');
+		})
+	</script>
+</body>
+
+</html>
